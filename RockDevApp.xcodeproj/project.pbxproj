@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB26364B2437D24000656476 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26364A2437D24000656476 /* LoginViewController.swift */; };
+		DB26364D2437D28B00656476 /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26364C2437D28B00656476 /* SingUpViewController.swift */; };
 		DB6EE11A2437B51000E260D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6EE1192437B51000E260D4 /* AppDelegate.swift */; };
 		DB6EE11C2437B51000E260D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6EE11B2437B51000E260D4 /* SceneDelegate.swift */; };
 		DB6EE11E2437B51000E260D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6EE11D2437B51000E260D4 /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB26364A2437D24000656476 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DB26364C2437D28B00656476 /* SingUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
 		DB6EE1162437B51000E260D4 /* RockDevApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockDevApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6EE1192437B51000E260D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB6EE11B2437B51000E260D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB2636442437D14E00656476 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB2636452437D16500656476 /* MainControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DB2636452437D16500656476 /* MainControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB6EE11D2437B51000E260D4 /* ViewController.swift */,
+				DB26364A2437D24000656476 /* LoginViewController.swift */,
+				DB26364C2437D28B00656476 /* SingUpViewController.swift */,
+			);
+			path = MainControllers;
+			sourceTree = "<group>";
+		};
 		DB6EE10D2437B51000E260D4 = {
 			isa = PBXGroup;
 			children = (
@@ -101,9 +123,9 @@
 		DB6EE1182437B51000E260D4 /* RockDevApp */ = {
 			isa = PBXGroup;
 			children = (
+				DB2636442437D14E00656476 /* Controllers */,
 				DB6EE1192437B51000E260D4 /* AppDelegate.swift */,
 				DB6EE11B2437B51000E260D4 /* SceneDelegate.swift */,
-				DB6EE11D2437B51000E260D4 /* ViewController.swift */,
 				DB6EE11F2437B51000E260D4 /* Main.storyboard */,
 				DB6EE1222437B51600E260D4 /* Assets.xcassets */,
 				DB6EE1242437B51600E260D4 /* LaunchScreen.storyboard */,
@@ -267,7 +289,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB26364B2437D24000656476 /* LoginViewController.swift in Sources */,
 				DB6EE11E2437B51000E260D4 /* ViewController.swift in Sources */,
+				DB26364D2437D28B00656476 /* SingUpViewController.swift in Sources */,
 				DB6EE11A2437B51000E260D4 /* AppDelegate.swift in Sources */,
 				DB6EE11C2437B51000E260D4 /* SceneDelegate.swift in Sources */,
 			);

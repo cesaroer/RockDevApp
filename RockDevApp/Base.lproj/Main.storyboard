@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K14-z8-MbE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -40,8 +40,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-serti" translatesAutoresizingMaskIntoConstraints="NO" id="Zt3-PR-Fqt">
-                                <rect key="frame" x="191" y="193" width="32" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Captura de Pantalla 2020-04-03 a la(s) 2.10.39 p.m." translatesAutoresizingMaskIntoConstraints="NO" id="Zt3-PR-Fqt">
+                                <rect key="frame" x="45" y="193" width="324" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="0XT-W9-gg6"/>
                                 </constraints>
@@ -335,7 +335,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo-serti" width="16" height="16"/>
+        <image name="Captura de Pantalla 2020-04-03 a la(s) 2.10.39 p.m." width="324" height="114"/>
         <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
 </document>
