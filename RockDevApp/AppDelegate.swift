@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //Haremos que el launchscreen dure un poco de tiempo en la pantalla antes de que despliegue la vista principal.
+        Thread.sleep(forTimeInterval: 0.7)
         return true
     }
 
