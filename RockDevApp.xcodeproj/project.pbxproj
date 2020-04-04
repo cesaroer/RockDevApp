@@ -29,6 +29,8 @@
 		DBBA13382439141600835897 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA13372439141600835897 /* ErrorModel.swift */; };
 		DBBA133C2439155400835897 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA133B2439155400835897 /* UsersModel.swift */; };
 		DBBA133E2439156C00835897 /* SingleUsrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA133D2439156C00835897 /* SingleUsrModel.swift */; };
+		DBBA134024391A1000835897 /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA133F24391A1000835897 /* SlideInTransition.swift */; };
+		DBBA134224391A5000835897 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA134124391A5000835897 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		DBBA13372439141600835897 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		DBBA133B2439155400835897 /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
 		DBBA133D2439156C00835897 /* SingleUsrModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleUsrModel.swift; sourceTree = "<group>"; };
+		DBBA133F24391A1000835897 /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
+		DBBA134124391A5000835897 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 				DBBA132924390CB200835897 /* KeyBoardDissmis.swift */,
 				DBBA132B24390DC700835897 /* ValidateFuncions.swift */,
 				DBBA132D2439119200835897 /* PublicFunctions.swift */,
+				DBBA133F24391A1000835897 /* SlideInTransition.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				DBBA1332243912FE00835897 /* HomeViewController.swift */,
+				DBBA134124391A5000835897 /* MenuViewController.swift */,
 			);
 			path = HomeControllers;
 			sourceTree = "<group>";
@@ -352,11 +358,13 @@
 				DB6EE11E2437B51000E260D4 /* ViewController.swift in Sources */,
 				DB26364D2437D28B00656476 /* SingUpViewController.swift in Sources */,
 				DBBA132E2439119200835897 /* PublicFunctions.swift in Sources */,
+				DBBA134024391A1000835897 /* SlideInTransition.swift in Sources */,
 				DBBA133E2439156C00835897 /* SingleUsrModel.swift in Sources */,
 				DBBA13382439141600835897 /* ErrorModel.swift in Sources */,
 				DBBA133C2439155400835897 /* UsersModel.swift in Sources */,
 				DBBA13282439091300835897 /* Colors.swift in Sources */,
 				DBBA1326243908F300835897 /* Styles.swift in Sources */,
+				DBBA134224391A5000835897 /* MenuViewController.swift in Sources */,
 				DBBA1333243912FE00835897 /* HomeViewController.swift in Sources */,
 				DBBA1336243913FB00835897 /* RegisterModel.swift in Sources */,
 				DBBA132A24390CB200835897 /* KeyBoardDissmis.swift in Sources */,
