@@ -18,6 +18,9 @@
 		DB6EE1312437B51600E260D4 /* RockDevAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6EE1302437B51600E260D4 /* RockDevAppTests.swift */; };
 		DB6EE13C2437B51600E260D4 /* RockDevAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6EE13B2437B51600E260D4 /* RockDevAppUITests.swift */; };
 		DB6EE14B2437B6CF00E260D4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DB6EE14A2437B6CF00E260D4 /* Alamofire */; };
+		DBBA1326243908F300835897 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA1325243908F300835897 /* Styles.swift */; };
+		DBBA13282439091300835897 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA13272439091300835897 /* Colors.swift */; };
+		DBBA132A24390CB200835897 /* KeyBoardDissmis.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA132924390CB200835897 /* KeyBoardDissmis.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,9 @@
 		DB6EE1372437B51600E260D4 /* RockDevAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RockDevAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6EE13B2437B51600E260D4 /* RockDevAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockDevAppUITests.swift; sourceTree = "<group>"; };
 		DB6EE13D2437B51600E260D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBBA1325243908F300835897 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		DBBA13272439091300835897 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		DBBA132924390CB200835897 /* KeyBoardDissmis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoardDissmis.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,16 @@
 			path = MainControllers;
 			sourceTree = "<group>";
 		};
+		DB26364E2437D5BA00656476 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DBBA1325243908F300835897 /* Styles.swift */,
+				DBBA13272439091300835897 /* Colors.swift */,
+				DBBA132924390CB200835897 /* KeyBoardDissmis.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		DB6EE10D2437B51000E260D4 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +139,7 @@
 		DB6EE1182437B51000E260D4 /* RockDevApp */ = {
 			isa = PBXGroup;
 			children = (
+				DB26364E2437D5BA00656476 /* Helpers */,
 				DB2636442437D14E00656476 /* Controllers */,
 				DB6EE1192437B51000E260D4 /* AppDelegate.swift */,
 				DB6EE11B2437B51000E260D4 /* SceneDelegate.swift */,
@@ -292,6 +309,9 @@
 				DB26364B2437D24000656476 /* LoginViewController.swift in Sources */,
 				DB6EE11E2437B51000E260D4 /* ViewController.swift in Sources */,
 				DB26364D2437D28B00656476 /* SingUpViewController.swift in Sources */,
+				DBBA13282439091300835897 /* Colors.swift in Sources */,
+				DBBA1326243908F300835897 /* Styles.swift in Sources */,
+				DBBA132A24390CB200835897 /* KeyBoardDissmis.swift in Sources */,
 				DB6EE11A2437B51000E260D4 /* AppDelegate.swift in Sources */,
 				DB6EE11C2437B51000E260D4 /* SceneDelegate.swift in Sources */,
 			);

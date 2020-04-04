@@ -15,10 +15,19 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupElements()
      
             
     }
+    
+    
+ //MARK: Funcion que dará el estílo a nuestros botones
+ func setupElements(){
+    
+     //Aplicamos los estilos a el boton
+     Styles.styleFilledButton(signupButton)
+     Styles.styleHollowButton(loginButton)
+ }
 
 
 

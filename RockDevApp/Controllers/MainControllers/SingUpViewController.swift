@@ -21,6 +21,7 @@ class SingUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupElements()
 
 
     }
@@ -37,7 +38,18 @@ class SingUpViewController: UIViewController {
 
         
     }
-   
+
+    func setupElements(){
+        //ocultamos el label de error mientras no haya uno
+        errorLabel.alpha = 0
+        //Aplicamos los estilos a los texfields
+        Styles.styleTextField(nameTextField)
+        Styles.styleTextField(apellidoTextField)
+        Styles.styleTextField(emailTextField)
+        Styles.styleTextField(passwordTextField)
+        //Aplicamos los estilos a el boton
+        Styles.styleFilledButton(signUpButton)
+    }
 
 
 }
