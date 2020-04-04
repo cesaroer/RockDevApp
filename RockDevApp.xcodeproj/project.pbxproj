@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DB26364B2437D24000656476 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26364A2437D24000656476 /* LoginViewController.swift */; };
 		DB26364D2437D28B00656476 /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26364C2437D28B00656476 /* SingUpViewController.swift */; };
+		DB66997924391BD70008415E /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB66997824391BD70008415E /* UserTableViewCell.swift */; };
+		DB66997B24391BFC0008415E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB66997A24391BFC0008415E /* ProfileViewController.swift */; };
 		DB6EE11A2437B51000E260D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6EE1192437B51000E260D4 /* AppDelegate.swift */; };
 		DB6EE11C2437B51000E260D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6EE11B2437B51000E260D4 /* SceneDelegate.swift */; };
 		DB6EE11E2437B51000E260D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6EE11D2437B51000E260D4 /* ViewController.swift */; };
@@ -53,6 +55,8 @@
 /* Begin PBXFileReference section */
 		DB26364A2437D24000656476 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DB26364C2437D28B00656476 /* SingUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
+		DB66997824391BD70008415E /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		DB66997A24391BFC0008415E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DB6EE1162437B51000E260D4 /* RockDevApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockDevApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6EE1192437B51000E260D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB6EE11B2437B51000E260D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 			children = (
 				DBBA1332243912FE00835897 /* HomeViewController.swift */,
 				DBBA134124391A5000835897 /* MenuViewController.swift */,
+				DB66997824391BD70008415E /* UserTableViewCell.swift */,
+				DB66997A24391BFC0008415E /* ProfileViewController.swift */,
 			);
 			path = HomeControllers;
 			sourceTree = "<group>";
@@ -362,7 +368,9 @@
 				DBBA133E2439156C00835897 /* SingleUsrModel.swift in Sources */,
 				DBBA13382439141600835897 /* ErrorModel.swift in Sources */,
 				DBBA133C2439155400835897 /* UsersModel.swift in Sources */,
+				DB66997B24391BFC0008415E /* ProfileViewController.swift in Sources */,
 				DBBA13282439091300835897 /* Colors.swift in Sources */,
+				DB66997924391BD70008415E /* UserTableViewCell.swift in Sources */,
 				DBBA1326243908F300835897 /* Styles.swift in Sources */,
 				DBBA134224391A5000835897 /* MenuViewController.swift in Sources */,
 				DBBA1333243912FE00835897 /* HomeViewController.swift in Sources */,
