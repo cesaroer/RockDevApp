@@ -64,8 +64,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 UserDefaults.standard.removeObject(forKey: "pass")
                 UserDefaults.standard.set(false, forKey: "isLogin")
                 transitionToMain(contview: view)
-            case .profile:
-                performSegue(withIdentifier: "profileSegue", sender: AnyObject.self)
+          //  case .profile:
+                //performSegue(withIdentifier: "profileSegue", sender: AnyObject.self)
             default:
                 print("No hay esta opcion")
         }

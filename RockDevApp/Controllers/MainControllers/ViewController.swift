@@ -15,22 +15,25 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupElements()
-        //Funcion para ocultar el Teclado tocando en cualquier parte
-        self.hideKeyboard()
-     
+        //Si hay session del usuario guardada entonces cargamos la vista principal de lo contrario nos quedamos en la vista predeterminada
+        if UserDefaults.standard.bool(forKey: "isLogin") == true{
+            print("Dirigiendo a Home")
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
+                 transitionToHome(contview: self.view)
+            }
+        }
             
     }
-    
-    
- //MARK: Funcion que dará el estílo a nuestros botones
- func setupElements(){
-    
-     //Aplicamos los estilos a el boton
-     Styles.styleFilledButton(signupButton)
-     Styles.styleHollowButton(loginButton)
- }
 
+//MARK: Funcion que dará el estílo a nuestros botones
+    func setupElements(){
+       
+        //Aplicamos los estilos a el boton
+        Styles.styleFilledButton(signupButton)
+        Styles.styleHollowButton(loginButton)
+    }
 
 
 }
