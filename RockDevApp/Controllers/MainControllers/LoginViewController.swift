@@ -41,6 +41,8 @@ class LoginViewController: UIViewController {
     }
         
         @IBAction func autoCompletBtnTapped(_ sender: Any) {
+            autocompleteUsrInfo()
+
         }
     
     
@@ -56,6 +58,13 @@ class LoginViewController: UIViewController {
         //Aplicamos los estilos a el boton
         Styles.styleFilledButton(loginButton)
      }
+
+    //MARK: Funcion de autocompletado de usuario
+    
+    func autocompleteUsrInfo(){
+        emailTextField.text = "george.bluth@reqres.in"
+        passwordTextField.text = "Asdfghi1*"
+    }
         
     
 

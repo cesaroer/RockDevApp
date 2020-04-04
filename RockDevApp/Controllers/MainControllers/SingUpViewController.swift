@@ -54,13 +54,38 @@ class SingUpViewController: UIViewController {
 //MARK: Buttuns Actions
     
     @IBAction func autocompleteBtnTapped(_ sender: Any) {
+        autocompleteUsrInfo()
+
     }
     
     
-    @IBAction func signUpBtnTapped(_ sender: Any) {
+        @IBAction func signUpBtnTapped(_ sender: Any) {
+            let error = validarCampos()
+            if error != nil{
+                //Hubo un error en algun campo entonces mostramos mensaje de error
+                showErrorMessage(error!)
+            }else{
+                //sendUsrData(email: emailTextField.text!, pass: passwordTextField.text!)
+            }
+            
+            
+        }
+        
 
         
-    }
+    //Función que muestra el label con un mensaje de error
+        func showErrorMessage(_ message: String){
+                errorLabel.text = message
+                errorLabel.textColor = .red
+                errorLabel.alpha = 1
+        }
+        
+    //Funcion para mostrar mensaje exítoso
+        func showSuccesMessage(_ message: String){
+            errorLabel.text = message
+            errorLabel.textColor = .green
+            errorLabel.alpha = 1
+        }
 
     func setupElements(){
         //ocultamos el label de error mientras no haya uno
@@ -72,6 +97,16 @@ class SingUpViewController: UIViewController {
         Styles.styleTextField(passwordTextField)
         //Aplicamos los estilos a el boton
         Styles.styleFilledButton(signUpButton)
+    }
+    
+    
+    //MARK: Funcion de autocompletado de usuario
+    
+    func autocompleteUsrInfo(){
+        nameTextField.text = "George"
+        apellidoTextField.text = "Bluth"
+        emailTextField.text = "george.bluth@reqres.in"
+        passwordTextField.text = "Asdfghi1*"
     }
 
 
