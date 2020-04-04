@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupElements()
+        //Funcion para ocultar el Teclado tocando en cualquier parte
+        self.hideKeyboard()
      
             
     }
