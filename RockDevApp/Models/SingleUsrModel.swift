@@ -1,5 +1,5 @@
 //
-//  UsersModel.swift
+//  SingleUsrModel.swift
 //  RockDevApp
 //
 //  Created by Cesar on 04/04/20.
@@ -8,23 +8,21 @@
 
 import Foundation
 
-// MARK: - GetUsers
-struct GetUsers: Codable {
-    let page, perPage, total, totalPages: Int?
-    let data: [DatUsr]?
-
-
-    enum CodingKeys: String, CodingKey {
-        case page
-        case perPage = "per_page"
-        case total
-        case totalPages = "total_pages"
-        case data
-    }
+// MARK: - USRCompleteData
+struct UsrCompleteData: Codable {
+    let data: DataClass?
+    let ad: Ad?
 }
 
-// MARK: - DatUsr
-struct DatUsr: Codable {
+// MARK: - Ad
+struct Ad: Codable {
+    let company: String?
+    let url: String?
+    let text: String?
+}
+
+// MARK: - DataClass
+struct DataClass: Codable {
     let id: Int?
     let email, firstName, lastName: String?
     let avatar: String?
