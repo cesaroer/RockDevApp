@@ -22,6 +22,11 @@
 		DBBA13282439091300835897 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA13272439091300835897 /* Colors.swift */; };
 		DBBA132A24390CB200835897 /* KeyBoardDissmis.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA132924390CB200835897 /* KeyBoardDissmis.swift */; };
 		DBBA132C24390DC700835897 /* ValidateFuncions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA132B24390DC700835897 /* ValidateFuncions.swift */; };
+		DBBA132E2439119200835897 /* PublicFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA132D2439119200835897 /* PublicFunctions.swift */; };
+		DBBA1330243912B000835897 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBBA132F243912B000835897 /* Home.storyboard */; };
+		DBBA1333243912FE00835897 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA1332243912FE00835897 /* HomeViewController.swift */; };
+		DBBA1336243913FB00835897 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA1335243913FB00835897 /* RegisterModel.swift */; };
+		DBBA13382439141600835897 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA13372439141600835897 /* ErrorModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +67,11 @@
 		DBBA13272439091300835897 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		DBBA132924390CB200835897 /* KeyBoardDissmis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoardDissmis.swift; sourceTree = "<group>"; };
 		DBBA132B24390DC700835897 /* ValidateFuncions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateFuncions.swift; sourceTree = "<group>"; };
+		DBBA132D2439119200835897 /* PublicFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicFunctions.swift; sourceTree = "<group>"; };
+		DBBA132F243912B000835897 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		DBBA1332243912FE00835897 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DBBA1335243913FB00835897 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		DBBA13372439141600835897 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +103,7 @@
 		DB2636442437D14E00656476 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DBBA1331243912D700835897 /* HomeControllers */,
 				DB2636452437D16500656476 /* MainControllers */,
 			);
 			path = Controllers;
@@ -115,6 +126,7 @@
 				DBBA13272439091300835897 /* Colors.swift */,
 				DBBA132924390CB200835897 /* KeyBoardDissmis.swift */,
 				DBBA132B24390DC700835897 /* ValidateFuncions.swift */,
+				DBBA132D2439119200835897 /* PublicFunctions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -142,11 +154,13 @@
 		DB6EE1182437B51000E260D4 /* RockDevApp */ = {
 			isa = PBXGroup;
 			children = (
+				DBBA1334243913E300835897 /* Models */,
 				DB2636442437D14E00656476 /* Controllers */,
 				DB26364E2437D5BA00656476 /* Helpers */,
 				DB6EE1192437B51000E260D4 /* AppDelegate.swift */,
 				DB6EE11B2437B51000E260D4 /* SceneDelegate.swift */,
 				DB6EE11F2437B51000E260D4 /* Main.storyboard */,
+				DBBA132F243912B000835897 /* Home.storyboard */,
 				DB6EE1222437B51600E260D4 /* Assets.xcassets */,
 				DB6EE1242437B51600E260D4 /* LaunchScreen.storyboard */,
 				DB6EE1272437B51600E260D4 /* Info.plist */,
@@ -170,6 +184,23 @@
 				DB6EE13D2437B51600E260D4 /* Info.plist */,
 			);
 			path = RockDevAppUITests;
+			sourceTree = "<group>";
+		};
+		DBBA1331243912D700835897 /* HomeControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DBBA1332243912FE00835897 /* HomeViewController.swift */,
+			);
+			path = HomeControllers;
+			sourceTree = "<group>";
+		};
+		DBBA1334243913E300835897 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DBBA1335243913FB00835897 /* RegisterModel.swift */,
+				DBBA13372439141600835897 /* ErrorModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +316,7 @@
 				DB6EE1262437B51600E260D4 /* LaunchScreen.storyboard in Resources */,
 				DB6EE1232437B51600E260D4 /* Assets.xcassets in Resources */,
 				DB6EE1212437B51000E260D4 /* Main.storyboard in Resources */,
+				DBBA1330243912B000835897 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,8 +345,12 @@
 				DB26364B2437D24000656476 /* LoginViewController.swift in Sources */,
 				DB6EE11E2437B51000E260D4 /* ViewController.swift in Sources */,
 				DB26364D2437D28B00656476 /* SingUpViewController.swift in Sources */,
+				DBBA132E2439119200835897 /* PublicFunctions.swift in Sources */,
+				DBBA13382439141600835897 /* ErrorModel.swift in Sources */,
 				DBBA13282439091300835897 /* Colors.swift in Sources */,
 				DBBA1326243908F300835897 /* Styles.swift in Sources */,
+				DBBA1333243912FE00835897 /* HomeViewController.swift in Sources */,
+				DBBA1336243913FB00835897 /* RegisterModel.swift in Sources */,
 				DBBA132A24390CB200835897 /* KeyBoardDissmis.swift in Sources */,
 				DB6EE11A2437B51000E260D4 /* AppDelegate.swift in Sources */,
 				DB6EE11C2437B51000E260D4 /* SceneDelegate.swift in Sources */,
