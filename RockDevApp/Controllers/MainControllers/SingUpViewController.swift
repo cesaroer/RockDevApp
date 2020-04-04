@@ -25,7 +25,6 @@ class SingUpViewController: UIViewController {
         //Funcion para ocultar el Teclado tocando en cualquier parte
         self.hideKeyboard()
 
-
     }
 
    
