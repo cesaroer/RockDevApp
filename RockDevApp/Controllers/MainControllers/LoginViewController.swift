@@ -25,11 +25,20 @@ class LoginViewController: UIViewController {
         
     //MARK: Buttons Actions
 
-        @IBAction func loginTapped(_ sender: Any) {
+    @IBAction func loginTapped(_ sender: Any) {
+        
+        //Validamos los texfields
+        if  emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+          || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
             
-         
-            
+            errorLabel.text =  "Por favor llena todos los campos"
+            errorLabel.alpha = 1
         }
+        
+
+        
+        
+    }
         
         @IBAction func autoCompletBtnTapped(_ sender: Any) {
         }

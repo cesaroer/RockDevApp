@@ -26,6 +26,28 @@ class SingUpViewController: UIViewController {
         self.hideKeyboard()
 
     }
+    
+    //Verifica los campos y valida que los datos son correctos, si todo esta bien la funcion devuelve nil, en otro caso devuelve mensaje de error
+      func validarCampos() -> String? {
+              
+              //Verificamos que los campos tienen datos
+             
+              if nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+                || apellidoTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+                || emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+                || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
+                  return "Por favor llena todos los campos"
+              }
+              
+              //Verificar si la contraseña es segura
+              //*Usamos trimmingCharacters(in: .whitespacesAndNewlines) para limpiar de espacios y saltos de linea la contraseña del usuario*
+              let cleanPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+          if  isPasswordValid(cleanPassword) == false {
+                  //La contraseña no es suficientemente segura
+                  return "introduce una contraseña con: al menos 8 caracteres ,un caracter especial y un numero"
+              }
+              return nil
+      }
 
    
     
