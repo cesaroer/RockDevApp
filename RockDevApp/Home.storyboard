@@ -10,7 +10,7 @@
         <!--Users-->
         <scene sceneID="1Gr-9F-Mzh">
             <objects>
-                <viewController storyboardIdentifier="homeVC" id="7Bn-MI-Ufm" customClass="HomeViewController" customModule="sertiAppPrueba" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeVC" id="7Bn-MI-Ufm" customClass="HomeViewController" customModule="RockDevApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kng-LD-1q8">
                         <rect key="frame" x="0.0" y="0.0" width="400" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,10 +19,10 @@
                                 <rect key="frame" x="0.0" y="168" width="400" height="533"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="usrCell" rowHeight="190" id="rza-IR-cRF" customClass="UserTableViewCell" customModule="sertiAppPrueba" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="usrCell" rowHeight="190" id="rza-IR-cRF" customClass="UserTableViewCell" customModule="RockDevApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="400" height="190"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rza-IR-cRF" id="ih6-H7-Bqz" customClass="UserTableViewCell" customModule="sertiAppPrueba" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rza-IR-cRF" id="ih6-H7-Bqz" customClass="UserTableViewCell" customModule="RockDevApp" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="400" height="190"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -135,10 +135,10 @@
                             <constraint firstItem="8bO-DF-FlD" firstAttribute="top" secondItem="uRO-5e-xeN" secondAttribute="bottom" constant="8" id="3GP-3n-xuG"/>
                             <constraint firstItem="NsE-h6-Jr6" firstAttribute="top" secondItem="8bO-DF-FlD" secondAttribute="bottom" constant="-4" id="6vg-Nt-g8Q"/>
                             <constraint firstAttribute="trailing" secondItem="ILB-cZ-RLd" secondAttribute="trailing" id="JP1-Od-F7x"/>
+                            <constraint firstItem="ILB-cZ-RLd" firstAttribute="top" secondItem="NsE-h6-Jr6" secondAttribute="bottom" id="KPW-9Y-v6v"/>
                             <constraint firstItem="8bO-DF-FlD" firstAttribute="leading" secondItem="DKR-dd-Odk" secondAttribute="leading" constant="20" id="MqW-4o-vEd"/>
                             <constraint firstAttribute="bottom" secondItem="ILB-cZ-RLd" secondAttribute="bottom" constant="35" id="SDb-qe-vH5"/>
                             <constraint firstItem="uRO-5e-xeN" firstAttribute="top" secondItem="DKR-dd-Odk" secondAttribute="top" constant="16" id="T3g-QE-RPJ"/>
-                            <constraint firstItem="ILB-cZ-RLd" firstAttribute="top" secondItem="kng-LD-1q8" secondAttribute="top" constant="168" id="Xbs-mh-X0u"/>
                             <constraint firstItem="ILB-cZ-RLd" firstAttribute="leading" secondItem="kng-LD-1q8" secondAttribute="leading" id="fje-Q6-7Wv"/>
                             <constraint firstItem="NsE-h6-Jr6" firstAttribute="trailing" secondItem="DKR-dd-Odk" secondAttribute="trailing" constant="0.01" id="nM2-WS-DFt"/>
                             <constraint firstItem="uRO-5e-xeN" firstAttribute="leading" secondItem="DKR-dd-Odk" secondAttribute="leading" constant="13" id="svw-1a-8MN"/>
@@ -151,17 +151,17 @@
                     <connections>
                         <outlet property="searchBar" destination="NsE-h6-Jr6" id="7Ev-3q-Knm"/>
                         <outlet property="usrTableView" destination="ILB-cZ-RLd" id="dE0-Zw-ssa"/>
-                        <segue destination="nrI-WJ-4fh" kind="show" identifier="profileSegue" id="r0W-Au-coF"/>
+                        <segue destination="Rf5-6C-C6F" kind="show" identifier="mapSegue" id="mnS-15-Lbc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IkE-rm-ibG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902.89855072463774" y="563.31521739130437"/>
+            <point key="canvasLocation" x="932" y="65"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="b8W-Kw-d7o">
             <objects>
-                <tableViewController storyboardIdentifier="menuVc" id="3eV-ko-3g8" customClass="MenuViewController" customModule="sertiAppPrueba" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="menuVc" id="3eV-ko-3g8" customClass="MenuViewController" customModule="RockDevApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Ai1-C0-UqY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,8 +191,49 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="103" id="DYG-4T-AWv">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="103" id="Zri-lE-UM9">
                                         <rect key="frame" x="0.0" y="121" width="414" height="103"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zri-lE-UM9" id="Gaz-2c-KP4">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappin" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="g0z-Fj-Sxm">
+                                                    <rect key="frame" x="20" y="26" width="60" height="51"/>
+                                                    <color key="tintColor" red="0.18039215689999999" green="0.76862745099999996" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="51.670000000000002" id="JjO-Mv-vBJ"/>
+                                                        <constraint firstAttribute="width" constant="60" id="twp-Zx-spP"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Route" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aj-nK-RWW">
+                                                    <rect key="frame" x="95" y="25" width="67" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genera una ruta con tu localización actual a Bellas Artes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xUc-tZ-BIZ">
+                                                    <rect key="frame" x="95" y="54" width="249" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="38" id="dua-vB-UMC"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="g0z-Fj-Sxm" firstAttribute="leading" secondItem="Gaz-2c-KP4" secondAttribute="leadingMargin" constant="0.01" id="IS2-UR-ZB9"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xUc-tZ-BIZ" secondAttribute="trailing" constant="50" id="PH8-Yk-JRA"/>
+                                                <constraint firstItem="g0z-Fj-Sxm" firstAttribute="top" secondItem="Gaz-2c-KP4" secondAttribute="topMargin" constant="14.67" id="Pa0-82-UZl"/>
+                                                <constraint firstItem="xUc-tZ-BIZ" firstAttribute="top" secondItem="g0z-Fj-Sxm" secondAttribute="bottom" constant="-23.333333333333343" id="aQ7-XL-bPN"/>
+                                                <constraint firstItem="xUc-tZ-BIZ" firstAttribute="leading" secondItem="g0z-Fj-Sxm" secondAttribute="trailing" constant="15" id="vfm-Xj-LqO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="103" id="DYG-4T-AWv">
+                                        <rect key="frame" x="0.0" y="224" width="414" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DYG-4T-AWv" id="sAG-8k-2ft">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
@@ -238,7 +279,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="103" id="bAy-yq-CiK">
-                                        <rect key="frame" x="0.0" y="224" width="414" height="103"/>
+                                        <rect key="frame" x="0.0" y="327" width="414" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bAy-yq-CiK" id="QIf-2h-iYK">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
@@ -269,12 +310,52 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9o-jn-7LF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1640.5797101449277" y="195.6521739130435"/>
+            <point key="canvasLocation" x="118.84057971014494" y="63.586956521739133"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="RZJ-en-Q9J">
+            <objects>
+                <viewController storyboardIdentifier="mapVC" id="Rf5-6C-C6F" customClass="MapViewController" customModule="RockDevApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Sx-b7-38F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cW6-u8-qj9">
+                                <rect key="frame" x="0.0" y="79" width="414" height="657"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camino a Bellas Artes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBK-Dz-cqk">
+                                <rect key="frame" x="48" y="20" width="321" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="321" id="D3i-eb-kXT"/>
+                                    <constraint firstAttribute="height" constant="44" id="M4j-ae-XX1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cW6-u8-qj9" secondAttribute="bottom" constant="0.01" id="4ka-0Q-Bcm"/>
+                            <constraint firstItem="WBK-Dz-cqk" firstAttribute="leading" secondItem="6Sx-b7-38F" secondAttribute="leadingMargin" constant="28" id="Fdl-bg-evM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WBK-Dz-cqk" secondAttribute="trailing" constant="25" id="M9X-kE-ieX"/>
+                            <constraint firstItem="cW6-u8-qj9" firstAttribute="leading" secondItem="6Sx-b7-38F" secondAttribute="leading" constant="0.01" id="PDQ-7b-yk4"/>
+                            <constraint firstAttribute="trailing" secondItem="cW6-u8-qj9" secondAttribute="trailing" constant="0.01" id="aWu-Hk-Dmy"/>
+                            <constraint firstItem="cW6-u8-qj9" firstAttribute="top" secondItem="WBK-Dz-cqk" secondAttribute="bottom" constant="15" id="hJp-r8-T2g"/>
+                            <constraint firstItem="WBK-Dz-cqk" firstAttribute="top" secondItem="6Sx-b7-38F" secondAttribute="topMargin" constant="20" id="mph-2N-9bz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="00c-77-HL1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hih-Fz-PgZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cYd-6r-eP0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940.57971014492762" y="784.23913043478262"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="B0V-I5-7hu">
             <objects>
-                <viewController storyboardIdentifier="profileVC" id="nrI-WJ-4fh" customClass="ProfileViewController" customModule="sertiAppPrueba" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileVC" id="nrI-WJ-4fh" customClass="ProfileViewController" customModule="RockDevApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nwg-H2-1hF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -410,7 +491,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jwn-39-Ieh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="911.59420289855075" y="-101.08695652173914"/>
+            <point key="canvasLocation" x="1800" y="64"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kt0-qY-dw5">
@@ -427,12 +508,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DOH-GB-7vU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="98.550724637681171" y="65.217391304347828"/>
+            <point key="canvasLocation" x="942" y="-675"/>
         </scene>
     </scenes>
     <resources>
         <image name="Captura de Pantalla 2020-03-30 a la(s) 12.06.11 a.m." width="400" height="316"/>
         <image name="house.fill" catalog="system" width="64" height="52"/>
+        <image name="mappin" catalog="system" width="52" height="64"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
     </resources>
 </document>

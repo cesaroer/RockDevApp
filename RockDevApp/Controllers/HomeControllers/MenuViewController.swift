@@ -10,8 +10,10 @@ import UIKit
 
 enum MenuType: Int{
     case home
+    case route
     case profile
     case logout
+
 }
 
 class MenuViewController: UITableViewController {

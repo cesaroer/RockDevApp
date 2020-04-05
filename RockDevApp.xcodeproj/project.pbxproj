@@ -33,6 +33,7 @@
 		DBBA133E2439156C00835897 /* SingleUsrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA133D2439156C00835897 /* SingleUsrModel.swift */; };
 		DBBA134024391A1000835897 /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA133F24391A1000835897 /* SlideInTransition.swift */; };
 		DBBA134224391A5000835897 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA134124391A5000835897 /* MenuViewController.swift */; };
+		DBBF9DD924395D4A00CA14B5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF9DD824395D4A00CA14B5 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		DBBA133D2439156C00835897 /* SingleUsrModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleUsrModel.swift; sourceTree = "<group>"; };
 		DBBA133F24391A1000835897 /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
 		DBBA134124391A5000835897 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		DBBF9DD824395D4A00CA14B5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 				DBBA134124391A5000835897 /* MenuViewController.swift */,
 				DB66997824391BD70008415E /* UserTableViewCell.swift */,
 				DB66997A24391BFC0008415E /* ProfileViewController.swift */,
+				DBBF9DD824395D4A00CA14B5 /* MapViewController.swift */,
 			);
 			path = HomeControllers;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				DBBA132C24390DC700835897 /* ValidateFuncions.swift in Sources */,
 				DB26364B2437D24000656476 /* LoginViewController.swift in Sources */,
 				DB6EE11E2437B51000E260D4 /* ViewController.swift in Sources */,
+				DBBF9DD924395D4A00CA14B5 /* MapViewController.swift in Sources */,
 				DB26364D2437D28B00656476 /* SingUpViewController.swift in Sources */,
 				DBBA132E2439119200835897 /* PublicFunctions.swift in Sources */,
 				DBBA134024391A1000835897 /* SlideInTransition.swift in Sources */,
