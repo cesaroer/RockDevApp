@@ -206,16 +206,34 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //print(usrsData![indexPath.row].firstName!)
-        let storyBoardHome = UIStoryboard(name: "Home", bundle: nil)
-        let profileVC = storyBoardHome.instantiateViewController(identifier: "profileVC") as! ProfileViewController
-        DispatchQueue.main.async {
-            profileVC.name = self.usrsData![indexPath.row].firstName!
-            profileVC.lastName = self.usrsData![indexPath.row].lastName!
-            profileVC.email = self.usrsData![indexPath.row].email!
-            profileVC.usrId = self.usrsData![indexPath.row].id!
-            profileVC.usrImage = self.usrsAvatar[indexPath.row]
-            self.present(profileVC, animated: true, completion: nil)
+        
+        //Si estamos buscando
+        if searching {
+            
+            let indexOfElement = usersNamesArray.firstIndex(of: searchingNames[indexPath.row])
+            
+            let storyBoardHome = UIStoryboard(name: "Home", bundle: nil)
+            let profileVC = storyBoardHome.instantiateViewController(identifier: "profileVC") as! ProfileViewController
+            DispatchQueue.main.async {
+                profileVC.name = self.usrsData![indexOfElement!].firstName!
+                profileVC.lastName = self.usrsData![indexOfElement!].lastName!
+                profileVC.email = self.usrsData![indexOfElement!].email!
+                profileVC.usrId = self.usrsData![indexOfElement!].id!
+                profileVC.usrImage = self.usrsAvatar[indexOfElement!]
+                self.present(profileVC, animated: true, completion: nil)
+            }
+        }else{
+            
+            let storyBoardHome = UIStoryboard(name: "Home", bundle: nil)
+            let profileVC = storyBoardHome.instantiateViewController(identifier: "profileVC") as! ProfileViewController
+            DispatchQueue.main.async {
+                profileVC.name = self.usrsData![indexPath.row].firstName!
+                profileVC.lastName = self.usrsData![indexPath.row].lastName!
+                profileVC.email = self.usrsData![indexPath.row].email!
+                profileVC.usrId = self.usrsData![indexPath.row].id!
+                profileVC.usrImage = self.usrsAvatar[indexPath.row]
+                self.present(profileVC, animated: true, completion: nil)
+            }
         }
     }
     
