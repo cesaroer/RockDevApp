@@ -34,6 +34,7 @@
 		DBBA134024391A1000835897 /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA133F24391A1000835897 /* SlideInTransition.swift */; };
 		DBBA134224391A5000835897 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA134124391A5000835897 /* MenuViewController.swift */; };
 		DBBF9DD924395D4A00CA14B5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF9DD824395D4A00CA14B5 /* MapViewController.swift */; };
+		DBBF9DDD24399B4700CA14B5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBF9DDB24399B4100CA14B5 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		DBBA133F24391A1000835897 /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
 		DBBA134124391A5000835897 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DBBF9DD824395D4A00CA14B5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		DBBF9DDB24399B4100CA14B5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBBF9DDD24399B4700CA14B5 /* MapKit.framework in Frameworks */,
 				DB6EE14B2437B6CF00E260D4 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +156,7 @@
 				DB6EE12F2437B51600E260D4 /* RockDevAppTests */,
 				DB6EE13A2437B51600E260D4 /* RockDevAppUITests */,
 				DB6EE1172437B51000E260D4 /* Products */,
+				DBBF9DDA24399B4100CA14B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,6 +226,14 @@
 				DBBA133D2439156C00835897 /* SingleUsrModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DBBF9DDA24399B4100CA14B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBBF9DDB24399B4100CA14B5 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,7 +498,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -540,7 +552,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

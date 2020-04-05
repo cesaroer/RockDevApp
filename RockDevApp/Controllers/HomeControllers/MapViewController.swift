@@ -13,21 +13,35 @@ import CoreLocation
 class MapViewController: UIViewController {
 
     @IBOutlet var mapView: MKMapView!
-    
     //Variable en la que asignamos el gestor de localizacion
     let locationManager = CLLocationManager()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.stopUpdatingLocation()
         view.backgroundColor = UIColor.myRed
+
     }
     
     
-    override func viewDidAppear(_ animated: Bool) {
+//    override func viewDidAppear(_ animated: Bool) {
+//
+//    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        locationManager.stopUpdatingLocation()
+    }
+    
+    
+    
+//MARK: Actions Btns
+    
+    @IBAction func startBtnTapped(_ sender: Any) {
         //Activamos nuestra funcion en ViewDidAppear para poder verificar los servicios una vez que se presente la vista.
         checkLocationServices()
     }
-
+    
 //MARK: Funcion para configurar el locationmanager
     func setUpLocationMaganer() {
         //Configuramos delegado y precisión
@@ -42,7 +56,9 @@ class MapViewController: UIViewController {
             //iniciamos LocationManager
             setUpLocationMaganer()
             //checamos que permisos tenemos de localizacion
-            checkLocationAuthorization()
+            DispatchQueue.main.async {
+                self.checkLocationAuthorization()
+            }
         }else{
             //Mostramos alerta para que el usuario active su ubicacion
             let alert = UIAlertController(title: "Ubicación no activa", message: "Activa tu Ubicacion para poder ingresar a esta funcionalidad", preferredStyle: .alert)
@@ -56,8 +72,10 @@ class MapViewController: UIViewController {
     
 //MARK: Funcion para saber si tenemos permisos de Localizacion
     func checkLocationAuthorization() {
-        switch CLLocationManager.authorizationStatus() {
+        switch CLLocationManager.authorizationStatus(){
         case .authorizedWhenInUse:
+            print("ESTAMOS_EN_WHEN_IN_USE")
+            mapView.showsUserLocation = true
             break
         case .denied:
             break

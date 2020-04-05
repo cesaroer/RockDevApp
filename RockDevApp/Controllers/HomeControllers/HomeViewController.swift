@@ -128,23 +128,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
-//MARK: Funcion para obtener los datos completos del usuario
-    
-    func getUsrCompleteData(id: Int) {
-        let urlString = "https://reqres.in/api/users/\(id)"
-        let urlToRequest = URL(string: urlString)!
-        
-        AF.request(urlToRequest).responseJSON { (response) in
-            switch response.result {
-                case .success:
-                    let decoder = JSONDecoder()
-                    let usrData = try? decoder.decode(UsrCompleteData.self, from: response.data!)
-                case .failure(let err):
-                print(err)
-            }
-        }
-    }
-    
     
 //MARK: Funciones tableView
     
