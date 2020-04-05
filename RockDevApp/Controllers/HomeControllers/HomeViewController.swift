@@ -266,8 +266,9 @@ extension HomeViewController: UIViewControllerTransitioningDelegate, UISearchBar
     //Funciones de SearchBAr
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let usrNameSB = searchBar.text else {return}
+        //guard let usrNameSB = searchBar.text else {return}
         
+        //Si presionamos el boton se oculta el teclado
         self.view.endEditing(true)
     }
     

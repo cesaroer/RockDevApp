@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ILB-cZ-RLd">
-                                <rect key="frame" x="0.0" y="168" width="400" height="533"/>
+                                <rect key="frame" x="0.0" y="168" width="400" height="538"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="usrCell" rowHeight="190" id="rza-IR-cRF" customClass="UserTableViewCell" customModule="RockDevApp" customModuleProvider="target">
@@ -90,7 +90,7 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.75806927580000005" green="0.98781219499999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.19607843137254902" blue="0.19215686274509802" alpha="0.87243150680000003" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="usrApLbl" destination="F3t-ey-55c" id="psp-E0-770"/>
                                             <outlet property="usrAvatarImageView" destination="VWU-qb-caQ" id="3mq-Ga-3fN"/>
@@ -137,7 +137,7 @@
                             <constraint firstAttribute="trailing" secondItem="ILB-cZ-RLd" secondAttribute="trailing" id="JP1-Od-F7x"/>
                             <constraint firstItem="ILB-cZ-RLd" firstAttribute="top" secondItem="NsE-h6-Jr6" secondAttribute="bottom" id="KPW-9Y-v6v"/>
                             <constraint firstItem="8bO-DF-FlD" firstAttribute="leading" secondItem="DKR-dd-Odk" secondAttribute="leading" constant="20" id="MqW-4o-vEd"/>
-                            <constraint firstAttribute="bottom" secondItem="ILB-cZ-RLd" secondAttribute="bottom" constant="35" id="SDb-qe-vH5"/>
+                            <constraint firstAttribute="bottom" secondItem="ILB-cZ-RLd" secondAttribute="bottom" constant="30" id="SDb-qe-vH5"/>
                             <constraint firstItem="uRO-5e-xeN" firstAttribute="top" secondItem="DKR-dd-Odk" secondAttribute="top" constant="16" id="T3g-QE-RPJ"/>
                             <constraint firstItem="ILB-cZ-RLd" firstAttribute="leading" secondItem="kng-LD-1q8" secondAttribute="leading" id="fje-Q6-7Wv"/>
                             <constraint firstItem="NsE-h6-Jr6" firstAttribute="trailing" secondItem="DKR-dd-Odk" secondAttribute="trailing" constant="0.01" id="nM2-WS-DFt"/>
@@ -179,7 +179,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="house.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="U6J-dP-1Uu">
                                                     <rect key="frame" x="20" y="26" width="60" height="51"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="tintColor" red="0.18039215689999999" green="0.76862745099999996" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="0.87243150680000003" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qE-lh-LhS">
                                                     <rect key="frame" x="102" y="41" width="67" height="21"/>
@@ -200,7 +200,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappin" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="g0z-Fj-Sxm">
                                                     <rect key="frame" x="20" y="26" width="60" height="51"/>
-                                                    <color key="tintColor" red="0.18039215689999999" green="0.76862745099999996" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="0.87243150680000003" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="51.670000000000002" id="JjO-Mv-vBJ"/>
                                                         <constraint firstAttribute="width" constant="60" id="twp-Zx-spP"/>
@@ -241,7 +241,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nzu-33-HkT">
                                                     <rect key="frame" x="20" y="28" width="60" height="50.999999999999986"/>
-                                                    <color key="tintColor" red="0.18039215689999999" green="0.76862745099999996" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="0.87243150680000003" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="7A5-nG-JRY"/>
                                                         <constraint firstAttribute="height" constant="54.329999999999998" id="E4p-5L-vsO"/>
@@ -289,7 +289,7 @@
                                                     <rect key="frame" x="20" y="23" width="148" height="56"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
-                                                    <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Cerrar Sesion"/>
                                                 </button>
                                             </subviews>
@@ -323,7 +323,7 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cW6-u8-qj9">
                                 <rect key="frame" x="0.0" y="79" width="414" height="657"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camino a Bellas Artes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBK-Dz-cqk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camino a Bellas Artes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WBK-Dz-cqk">
                                 <rect key="frame" x="48" y="20" width="321" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="321" id="D3i-eb-kXT"/>
@@ -334,7 +334,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.1960784314" blue="0.19215686269999999" alpha="0.87243150680000003" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="cW6-u8-qj9" secondAttribute="bottom" constant="0.01" id="4ka-0Q-Bcm"/>
                             <constraint firstItem="WBK-Dz-cqk" firstAttribute="leading" secondItem="6Sx-b7-38F" secondAttribute="leadingMargin" constant="28" id="Fdl-bg-evM"/>
@@ -347,6 +347,9 @@
                         <viewLayoutGuide key="safeArea" id="00c-77-HL1"/>
                     </view>
                     <navigationItem key="navigationItem" id="hih-Fz-PgZ"/>
+                    <connections>
+                        <outlet property="mapView" destination="cW6-u8-qj9" id="m5a-nu-HwA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cYd-6r-eP0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -426,7 +429,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.18039215689999999" green="0.76862745099999996" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.1960784314" blue="0.19215686269999999" alpha="0.87243150680000003" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="qiu-o5-PH1"/>
                                     <constraint firstAttribute="width" constant="149" id="tmt-z8-gpT"/>

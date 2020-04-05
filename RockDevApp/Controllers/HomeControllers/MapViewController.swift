@@ -7,13 +7,84 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
 class MapViewController: UIViewController {
 
+    @IBOutlet var mapView: MKMapView!
+    
+    //Variable en la que asignamos el gestor de localizacion
+    let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.myRed
-
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //Activamos nuestra funcion en ViewDidAppear para poder verificar los servicios una vez que se presente la vista.
+        checkLocationServices()
     }
 
+//MARK: Funcion para configurar el locationmanager
+    func setUpLocationMaganer() {
+        //Configuramos delegado y precisión
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    }
+
+    
+//MARK: Funcion para saber si la localizacion esta habilitada
+    func checkLocationServices() {
+        if CLLocationManager.locationServicesEnabled(){
+            //iniciamos LocationManager
+            setUpLocationMaganer()
+            //checamos que permisos tenemos de localizacion
+            checkLocationAuthorization()
+        }else{
+            //Mostramos alerta para que el usuario active su ubicacion
+            let alert = UIAlertController(title: "Ubicación no activa", message: "Activa tu Ubicacion para poder ingresar a esta funcionalidad", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "Ok", style: .default) { (ok) in
+                    self.dismiss(animated: true, completion: nil)
+            }
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+//MARK: Funcion para saber si tenemos permisos de Localizacion
+    func checkLocationAuthorization() {
+        switch CLLocationManager.authorizationStatus() {
+        case .authorizedWhenInUse:
+            break
+        case .denied:
+            break
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+            break
+        case .restricted:
+            break
+        case .authorizedAlways:
+            break
+        default:
+            break
+        }
+    }
+
+}
+
+extension MapViewController: CLLocationManagerDelegate{
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        //well be back here
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        //Well be back here
+    }
+    
+    
+    
 }
