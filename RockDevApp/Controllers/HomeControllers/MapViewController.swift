@@ -15,19 +15,15 @@ class MapViewController: UIViewController {
     @IBOutlet var mapView: MKMapView!
     //Variable en la que asignamos el gestor de localizacion
     let locationManager = CLLocationManager()
+    let regionInMeters: Double = 1000
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.stopUpdatingLocation()
         view.backgroundColor = UIColor.myRed
-
     }
     
-    
-//    override func viewDidAppear(_ animated: Bool) {
-//
-//    }
     
     override func viewWillDisappear(_ animated: Bool) {
         locationManager.stopUpdatingLocation()
@@ -41,6 +37,8 @@ class MapViewController: UIViewController {
         //Activamos nuestra funcion en ViewDidAppear para poder verificar los servicios una vez que se presente la vista.
         checkLocationServices()
     }
+    
+
     
 //MARK: Funcion para configurar el locationmanager
     func setUpLocationMaganer() {
@@ -75,12 +73,17 @@ class MapViewController: UIViewController {
         switch CLLocationManager.authorizationStatus(){
         case .authorizedWhenInUse:
             print("ESTAMOS_EN_WHEN_IN_USE")
+            //mostramos la localizacion del usuario, hacemos un acercamiento a el y mantenemos actualizada la localizacion
             mapView.showsUserLocation = true
+            centerViewOnUsersLocation()
+            locationManager.startUpdatingLocation()
             break
         case .denied:
             break
         case .notDetermined:
+            //Si no tenemos autorizacion, pedimos que nos deje usar ubicacion
             locationManager.requestWhenInUseAuthorization()
+            self.checkLocationAuthorization()
             break
         case .restricted:
             break
@@ -90,17 +93,33 @@ class MapViewController: UIViewController {
             break
         }
     }
+    
+    
+//MARK: Funcion para configurar el mapa en la localizacion del usuario
+    func centerViewOnUsersLocation() {
+        if let location = locationManager.location?.coordinate {
+            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+            print("Centramos_la_regin")
+            mapView.setRegion(region, animated: true)
+        }
+    }
+    
 
 }
 
 extension MapViewController: CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        //well be back here
+        //Con esta funcion vamos a actualizar la ultima ubicacion dle usuario, a medida que se mueva si es que lo hace, si no no hacemos nada.
+        guard let location = locations.last else {return}
+        let center  = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+        mapView.setRegion(region, animated: true)
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        //Well be back here
+        //Checamos Si el usuario cambia autorizacion en la localizacion o si en un principio no dio permiso y ahora se lo pedimos.
+        checkLocationAuthorization()
     }
     
     
