@@ -28,6 +28,7 @@ class MapViewController: UIViewController {
         view.backgroundColor = UIColor.myRed
         //Ocultamos el pin al inicio y lo mostraremos cuando el usuario de tap en empezar
         pinImageView.isHidden = true
+        mapView.delegate = self
     }
     
     
@@ -127,6 +128,9 @@ class MapViewController: UIViewController {
     }
     
 
+    
+    
+
 }
 
 extension MapViewController: CLLocationManagerDelegate{
@@ -149,41 +153,45 @@ extension MapViewController: CLLocationManagerDelegate{
 }
 
 extension MapViewController: MKMapViewDelegate {
-    
+
 //MARK: Funcion para saber si la localizacion al mover el mapa cambio
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        
+
         print("Estamos_EN_GEOCODER")
         let center = getCenterLocation(MapView: mapView)
         let geoCoder = CLGeocoder()
-        
+
         //Verificamos si la localizacion previa es nula
         guard let previousLocation = self.previousLocation else {return}
-        
-        //Si la distancia es mayor a 50 metros empezamos la funcion, de lo contrario no hacemos nada
-        guard center.distance(from: previousLocation) > 50 else {return}
+
+        //Si la distancia es mayor a 20 metros empezamos la funcion, de lo contrario no hacemos nada
+        guard center.distance(from: previousLocation) > 20 else {return}
         self.previousLocation = center
         
+        //Dentro de esta funcion tendremos la direccion a travez de las coordenadas
         geoCoder.reverseGeocodeLocation(center) { [weak self](placemarks, error) in
             guard let self = self else{return}
             if let _ = error {
-                
+                print("estamosEnErrorGeoCodeReverse")
                 return
             }
-            
+
             guard let placemark = placemarks?.first else{
-                
+                print("ProbelamConLaDataRecividaDeGeocoder")
+
                 return
             }
-            
-            let streetNumber = placemark.subThoroughfare
-            let streetName = placemark.thoroughfare
+
+            //Obtenemos la direccion y numero de calle
+            let streetNumber = placemark.subThoroughfare ?? ""
+            let streetName = placemark.thoroughfare ?? ""
             print("ESTA_ES_LA_UBI:_ \(streetName) \(streetNumber)")
             
+            //Asignamos el hilo principal la direccion por que estamos en un closure y los closures son procesos asincronos
             DispatchQueue.main.async {
                 self.adressLbl.text = "\(streetName) \(streetNumber)"
             }
-            
+
         }
     }
 }
