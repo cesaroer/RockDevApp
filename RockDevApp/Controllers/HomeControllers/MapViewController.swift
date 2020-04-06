@@ -191,7 +191,6 @@ extension MapViewController: MKMapViewDelegate {
             DispatchQueue.main.async {
                 self.adressLbl.text = "\(streetName) \(streetNumber)"
             }
-
         }
     }
 }
