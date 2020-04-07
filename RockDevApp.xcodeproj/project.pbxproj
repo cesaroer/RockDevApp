@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB225036243C089A00806310 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB225034243C089A00806310 /* DataModel.xcdatamodeld */; };
+		DB225038243C08FC00806310 /* DataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB225037243C08FC00806310 /* DataBaseHelper.swift */; };
+		DB22503A243C1D8400806310 /* logUserImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB225039243C1D8400806310 /* logUserImageViewController.swift */; };
 		DB26364B2437D24000656476 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26364A2437D24000656476 /* LoginViewController.swift */; };
 		DB26364D2437D28B00656476 /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26364C2437D28B00656476 /* SingUpViewController.swift */; };
 		DB66997924391BD70008415E /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB66997824391BD70008415E /* UserTableViewCell.swift */; };
@@ -55,6 +58,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB225035243C089A00806310 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		DB225037243C08FC00806310 /* DataBaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseHelper.swift; sourceTree = "<group>"; };
+		DB225039243C1D8400806310 /* logUserImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logUserImageViewController.swift; sourceTree = "<group>"; };
 		DB26364A2437D24000656476 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DB26364C2437D28B00656476 /* SingUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
 		DB66997824391BD70008415E /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 				DBBA132B24390DC700835897 /* ValidateFuncions.swift */,
 				DBBA132D2439119200835897 /* PublicFunctions.swift */,
 				DBBA133F24391A1000835897 /* SlideInTransition.swift */,
+				DB225037243C08FC00806310 /* DataBaseHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -183,6 +190,7 @@
 				DB6EE1222437B51600E260D4 /* Assets.xcassets */,
 				DB6EE1242437B51600E260D4 /* LaunchScreen.storyboard */,
 				DB6EE1272437B51600E260D4 /* Info.plist */,
+				DB225034243C089A00806310 /* DataModel.xcdatamodeld */,
 			);
 			path = RockDevApp;
 			sourceTree = "<group>";
@@ -213,6 +221,7 @@
 				DB66997824391BD70008415E /* UserTableViewCell.swift */,
 				DB66997A24391BFC0008415E /* ProfileViewController.swift */,
 				DBBF9DD824395D4A00CA14B5 /* MapViewController.swift */,
+				DB225039243C1D8400806310 /* logUserImageViewController.swift */,
 			);
 			path = HomeControllers;
 			sourceTree = "<group>";
@@ -377,6 +386,7 @@
 				DBBA132C24390DC700835897 /* ValidateFuncions.swift in Sources */,
 				DB26364B2437D24000656476 /* LoginViewController.swift in Sources */,
 				DB6EE11E2437B51000E260D4 /* ViewController.swift in Sources */,
+				DB225036243C089A00806310 /* DataModel.xcdatamodeld in Sources */,
 				DBBF9DD924395D4A00CA14B5 /* MapViewController.swift in Sources */,
 				DB26364D2437D28B00656476 /* SingUpViewController.swift in Sources */,
 				DBBA132E2439119200835897 /* PublicFunctions.swift in Sources */,
@@ -386,6 +396,7 @@
 				DBBA133C2439155400835897 /* UsersModel.swift in Sources */,
 				DB66997B24391BFC0008415E /* ProfileViewController.swift in Sources */,
 				DBBA13282439091300835897 /* Colors.swift in Sources */,
+				DB22503A243C1D8400806310 /* logUserImageViewController.swift in Sources */,
 				DB66997924391BD70008415E /* UserTableViewCell.swift in Sources */,
 				DBBA1326243908F300835897 /* Styles.swift in Sources */,
 				DBBA134224391A5000835897 /* MenuViewController.swift in Sources */,
@@ -393,6 +404,7 @@
 				DBBA1336243913FB00835897 /* RegisterModel.swift in Sources */,
 				DBBA132A24390CB200835897 /* KeyBoardDissmis.swift in Sources */,
 				DB6EE11A2437B51000E260D4 /* AppDelegate.swift in Sources */,
+				DB225038243C08FC00806310 /* DataBaseHelper.swift in Sources */,
 				DB6EE11C2437B51000E260D4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -741,6 +753,19 @@
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		DB225034243C089A00806310 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DB225035243C089A00806310 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = DB225035243C089A00806310 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DB6EE10E2437B51000E260D4 /* Project object */;
 }

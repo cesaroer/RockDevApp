@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         //Haremos que el launchscreen dure un poco de tiempo en la pantalla antes de que despliegue la vista principal.
-        Thread.sleep(forTimeInterval: 0.7)
+        Thread.sleep(forTimeInterval: 0.6)
+        
+        //Con esto imprimimos la ruta de la imagen para saber si está guardada o no
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first ?? "error 404 not found")
         return true
     }
 
@@ -33,6 +37,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+    
+    //Variable para poder usar CoreData
+    lazy var persistentContainer: NSPersistentContainer = {
+
+        let container = NSPersistentContainer(name: "DataModel")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error {
+
+                fatalError("Unresolved error, \((error as NSError).userInfo)")
+            }
+        })
+        return container
+    }()
 
 
 }

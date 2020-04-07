@@ -158,6 +158,74 @@
             </objects>
             <point key="canvasLocation" x="932" y="65"/>
         </scene>
+        <!--Log User Image View Controller-->
+        <scene sceneID="WTW-sT-lCv">
+            <objects>
+                <viewController id="noP-3B-nsy" customClass="logUserImageViewController" customModule="RockDevApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JMx-nd-oUe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mvg-w8-gb4">
+                                <rect key="frame" x="87" y="70" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ep0-cQ-OBH">
+                                <rect key="frame" x="87" y="423" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbo-WA-ocf">
+                                <rect key="frame" x="87" y="256" width="240" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Guardar Imagen">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveBtnPressed:" destination="noP-3B-nsy" eventType="touchUpInside" id="Frb-ya-4ua"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDD-NN-vLw">
+                                <rect key="frame" x="87" y="333" width="240" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Mostrar Imagen">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="fetchImagePResedd:" destination="noP-3B-nsy" eventType="touchUpInside" id="O7G-Jj-Sbh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciA-Gb-goj">
+                                <rect key="frame" x="172" y="560" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" backgroundImage="camera.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="cameraBtnPressed:" destination="noP-3B-nsy" eventType="touchUpInside" id="BUN-42-dEy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selecciona una Imagen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSG-TH-frK">
+                                <rect key="frame" x="99" y="638" width="216" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="5ot-3o-Qbi"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xqs-aG-vQl"/>
+                    <connections>
+                        <outlet property="fetchImageView" destination="Ep0-cQ-OBH" id="RkE-qQ-vm4"/>
+                        <outlet property="saveImageView" destination="mvg-w8-gb4" id="2jA-L3-UkP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pvm-Sc-Q0t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1753.6231884057972" y="287.77173913043481"/>
+        </scene>
         <!--Menu View Controller-->
         <scene sceneID="b8W-Kw-d7o">
             <objects>
@@ -213,7 +281,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genera una ruta con tu localización actual a Bellas Artes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="xUc-tZ-BIZ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genera una ruta con tu localización actual a un lugar cercano" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="xUc-tZ-BIZ">
                                                     <rect key="frame" x="95" y="54" width="249" height="38"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="38" id="dua-vB-UMC"/>
@@ -306,6 +374,7 @@
                     <navigationItem key="navigationItem" id="goN-US-FH7"/>
                     <connections>
                         <outlet property="loggedUsrLbl" destination="yOp-nx-304" id="myU-7U-ODd"/>
+                        <segue destination="noP-3B-nsy" kind="show" identifier="imageSegue" id="748-Iv-uEx"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9o-jn-7LF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -323,10 +392,13 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cW6-u8-qj9">
                                 <rect key="frame" x="0.0" y="79" width="414" height="657"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0g-3r-Q2k">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0g-3r-Q2k">
                                 <rect key="frame" x="294" y="12" width="93" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="6Ww-ic-q2r"/>
+                                    <constraint firstAttribute="height" constant="50" id="dMp-mL-UFf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Empezar!">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="0.87243150680000003" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -335,13 +407,6 @@
                                     <action selector="startBtnTapped:" destination="Rf5-6C-C6F" eventType="touchUpInside" id="15S-LX-736"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Camino a Bellas Artes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="WBK-Dz-cqk">
-                                <rect key="frame" x="32" y="10" width="173" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="32"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pngkit_location-pin-icon-png_1307763" translatesAutoresizingMaskIntoConstraints="NO" id="cet-gr-rxX">
                                 <rect key="frame" x="187" y="367.66666666666669" width="40" height="40"/>
                                 <constraints>
@@ -360,10 +425,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tc-5i-qmU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tc-5i-qmU">
                                 <rect key="frame" x="324" y="532" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Huq-6j-c8d"/>
+                                    <constraint firstAttribute="height" constant="60" id="P7w-0w-S5V"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Ir">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -372,14 +440,25 @@
                                     <action selector="irBtnTapped:" destination="Rf5-6C-C6F" eventType="touchUpInside" id="idC-Dr-019"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Genera tu Ruta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="WBK-Dz-cqk">
+                                <rect key="frame" x="20" y="18" width="173" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.1960784314" blue="0.19215686269999999" alpha="0.87243150680000003" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Aux-3Y-lDz" firstAttribute="centerX" secondItem="cW6-u8-qj9" secondAttribute="centerX" id="BIX-zG-jOH"/>
+                            <constraint firstItem="00c-77-HL1" firstAttribute="trailing" secondItem="8tc-5i-qmU" secondAttribute="trailing" constant="30" id="EW7-cu-edg"/>
+                            <constraint firstItem="00c-77-HL1" firstAttribute="trailing" secondItem="f0g-3r-Q2k" secondAttribute="trailing" constant="27" id="HQx-tj-bVg"/>
                             <constraint firstItem="cW6-u8-qj9" firstAttribute="leading" secondItem="6Sx-b7-38F" secondAttribute="leading" id="KzL-09-Ume"/>
                             <constraint firstItem="00c-77-HL1" firstAttribute="bottom" secondItem="Aux-3Y-lDz" secondAttribute="bottom" constant="65" id="Mlg-yg-3A1"/>
                             <constraint firstItem="cet-gr-rxX" firstAttribute="centerX" secondItem="cW6-u8-qj9" secondAttribute="centerX" id="W3G-4W-u8B"/>
                             <constraint firstItem="cet-gr-rxX" firstAttribute="centerY" secondItem="cW6-u8-qj9" secondAttribute="centerY" constant="-20" id="WfZ-z5-1LT"/>
+                            <constraint firstItem="Aux-3Y-lDz" firstAttribute="top" secondItem="8tc-5i-qmU" secondAttribute="bottom" constant="21" id="eu2-vH-bNq"/>
+                            <constraint firstItem="f0g-3r-Q2k" firstAttribute="top" secondItem="00c-77-HL1" secondAttribute="top" constant="12" id="hz6-ZG-wgC"/>
                             <constraint firstAttribute="trailing" secondItem="cW6-u8-qj9" secondAttribute="trailing" id="jJO-3D-h65"/>
                             <constraint firstItem="cW6-u8-qj9" firstAttribute="top" secondItem="6Sx-b7-38F" secondAttribute="top" constant="79" id="jhF-PJ-CP4"/>
                             <constraint firstAttribute="bottom" secondItem="cW6-u8-qj9" secondAttribute="bottom" id="vE5-nU-PZi"/>
@@ -536,7 +615,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jwn-39-Ieh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1800" y="64"/>
+            <point key="canvasLocation" x="1754" y="-445"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kt0-qY-dw5">
@@ -558,6 +637,7 @@
     </scenes>
     <resources>
         <image name="Captura de Pantalla 2020-03-30 a la(s) 12.06.11 a.m." width="400" height="316"/>
+        <image name="camera.circle.fill" catalog="system" width="128" height="121"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="mappin" catalog="system" width="105" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>

@@ -30,10 +30,18 @@ class MenuViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let menuType = MenuType(rawValue: indexPath.row) else {return}
-        //Dependiendo la row que toquemos el enum nos lleva a una accion en otro controller o a cerrar session.
-        dismiss(animated: true) { [weak self] in
-            self?.didTapMenuType?(menuType)
+        
+        //si la celda seleccionada es profile hacemos lo siguiente
+        if indexPath.row == 2 {
+            
+            performSegue(withIdentifier: "imageSegue", sender: Any?.self)
+            
+        }else{
+            guard let menuType = MenuType(rawValue: indexPath.row) else {return}
+            //Dependiendo la row que toquemos el enum nos lleva a una accion en otro controller o a cerrar session.
+            dismiss(animated: true) { [weak self] in
+                self?.didTapMenuType?(menuType)
+            }
         }
     }
     
