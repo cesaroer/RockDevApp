@@ -18,6 +18,7 @@ enum MenuType: Int{
 
 class MenuViewController: UITableViewController {
     @IBOutlet weak var loggedUsrLbl: UILabel!
+    @IBOutlet weak var usrFetchImageView: UIImageView!
     
     var didTapMenuType: ((MenuType) -> Void)?
 
@@ -25,8 +26,13 @@ class MenuViewController: UITableViewController {
         super.viewDidLoad()
         //El email del usuario es el que tenemos guardado
         loggedUsrLbl.text = UserDefaults.standard.string(forKey: "email")
+        //SI hay imagen Guardada la cargamos, de lo contrario no hacemos nada
+        let arr = DataBaseHelper.shareInstance.fetchImage()
+        //fetchImageView.image = UIImage(data: arr[0].img!)
+        if let imageData = arr.last?.img {
+            usrFetchImageView.image = UIImage(data: imageData )
+        }
 
-        // Do any additional setup after loading the view.
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
