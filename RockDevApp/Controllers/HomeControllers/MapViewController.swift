@@ -20,6 +20,9 @@ class MapViewController: UIViewController {
     let regionInMeters: Double = 1000
     //Variable que tiene nuestra ubicacion en primera instanci
     var previousLocation:CLLocation?
+    //variables para resetear el mapa y pintar la ruta
+    let geoCoder = CLGeocoder()
+    var directionsArray:[MKDirections] = []
 
     
     override func viewDidLoad() {
@@ -46,6 +49,59 @@ class MapViewController: UIViewController {
         //mostramos el pin
         pinImageView.isHidden = false
 
+    }
+    @IBAction func irBtnTapped(_ sender: Any) {
+        getDirections()
+    }
+    
+//MARK: Funcion para obtener la direccion hacia un lugar
+    func getDirections() {
+        guard let location  = locationManager.location?.coordinate else {
+            return
+        }
+        
+        let request = createDirectionsRequest(from: location)
+        let directions = MKDirections( request: request)
+        resetMapView(directins: directions)
+        
+        directions.calculate { [unowned self] (response, error) in
+            guard let response = response else {return}
+            
+            for route in response.routes{
+                //let steps =  route.steps
+                print("ESTAS:SON:LAS:ISNTRUCCIONES:")
+                for step in route.steps{
+                    print(step.instructions)
+                }
+               
+                self.mapView.addOverlay(route.polyline)
+                self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+            }
+        }
+    }
+    
+//MARK: Funcion para configurar la ruta en pantalla
+    
+    func createDirectionsRequest(from coordinate: CLLocationCoordinate2D) -> MKDirections.Request {
+        let destinationCoordinate = getCenterLocation(MapView: mapView).coordinate
+        let startingLocation = MKPlacemark(coordinate: coordinate)
+        let destination = MKPlacemark(coordinate: destinationCoordinate)
+        
+        let request  = MKDirections.Request()
+        request.source = MKMapItem(placemark: startingLocation)
+        request.destination = MKMapItem(placemark: destination)
+        request.transportType = .automobile
+        request.requestsAlternateRoutes = true
+        
+        return request
+    }
+    
+//MARK: Funcion para resetear el map view cuando generamos rutas
+    func resetMapView(directins: MKDirections) {
+        mapView.removeOverlays(mapView.overlays)
+        directionsArray.append(directins)
+        let  _ = directionsArray.map { $0.cancel()}
+        directionsArray.removeAll()
     }
     
 
@@ -159,7 +215,7 @@ extension MapViewController: MKMapViewDelegate {
 
         print("Estamos_EN_GEOCODER")
         let center = getCenterLocation(MapView: mapView)
-        let geoCoder = CLGeocoder()
+
 
         //Verificamos si la localizacion previa es nula
         guard let previousLocation = self.previousLocation else {return}
@@ -167,6 +223,8 @@ extension MapViewController: MKMapViewDelegate {
         //Si la distancia es mayor a 20 metros empezamos la funcion, de lo contrario no hacemos nada
         guard center.distance(from: previousLocation) > 20 else {return}
         self.previousLocation = center
+        
+        geoCoder.cancelGeocode()
         
         //Dentro de esta funcion tendremos la direccion a travez de las coordenadas
         geoCoder.reverseGeocodeLocation(center) { [weak self](placemarks, error) in
@@ -192,5 +250,14 @@ extension MapViewController: MKMapViewDelegate {
                 self.adressLbl.text = "\(streetName) \(streetNumber)"
             }
         }
+    }
+    
+    
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay as! MKPolyline )
+        renderer.strokeColor = .blue
+        
+        return renderer
     }
 }
