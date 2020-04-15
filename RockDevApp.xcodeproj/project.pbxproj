@@ -38,6 +38,7 @@
 		DBBA134224391A5000835897 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA134124391A5000835897 /* MenuViewController.swift */; };
 		DBBF9DD924395D4A00CA14B5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF9DD824395D4A00CA14B5 /* MapViewController.swift */; };
 		DBBF9DDD24399B4700CA14B5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBF9DDB24399B4100CA14B5 /* MapKit.framework */; };
+		DBF314232446C55000EECDF8 /* WaterMarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF314222446C55000EECDF8 /* WaterMarkViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		DBBA134124391A5000835897 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DBBF9DD824395D4A00CA14B5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		DBBF9DDB24399B4100CA14B5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DBF314222446C55000EECDF8 /* WaterMarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterMarkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 				DB66997A24391BFC0008415E /* ProfileViewController.swift */,
 				DBBF9DD824395D4A00CA14B5 /* MapViewController.swift */,
 				DB225039243C1D8400806310 /* logUserImageViewController.swift */,
+				DBF314222446C55000EECDF8 /* WaterMarkViewController.swift */,
 			);
 			path = HomeControllers;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				DB6EE11E2437B51000E260D4 /* ViewController.swift in Sources */,
 				DB225036243C089A00806310 /* DataModel.xcdatamodeld in Sources */,
 				DBBF9DD924395D4A00CA14B5 /* MapViewController.swift in Sources */,
+				DBF314232446C55000EECDF8 /* WaterMarkViewController.swift in Sources */,
 				DB26364D2437D28B00656476 /* SingUpViewController.swift in Sources */,
 				DBBA132E2439119200835897 /* PublicFunctions.swift in Sources */,
 				DBBA134024391A1000835897 /* SlideInTransition.swift in Sources */,
