@@ -20,17 +20,18 @@ class WaterMarkViewController: UIViewController{
     }
     
     @IBAction func beginBtnPressed(_ sender: Any) {
+        //Esta variable es para saber donde vamos a colocar el texto en la imagen
+        let textPointOnImage = CGPoint(x: 30, y: 800)
         
-        let point = CGPoint(x: 20, y: 40)
+        print("Contenido de txtfld: \(waterTextFld.text!)")
         
-        print("Contenido de txtfld: \(waterTextFld.text)")
-        
+        //Verificamos que haya texto en el textfield
         if waterTextFld.text != nil && waterTextFld.text != ""{
             
             let text = waterTextFld.text
-            
-            waterMarkedImageView.image = textToImage(drawText: text!, inImage: contentImageView.image!, atPoint: point)
+            waterMarkedImageView.image = textToImage(drawText: text!, inImage: contentImageView.image!, atPoint: textPointOnImage)
         }else{
+        //Si no hay texto desplegamos una alerta al usuario
             let alert = UIAlertController(title: "Introduce un texto", message: "", preferredStyle: .alert)
             let ok = UIAlertAction(title: "Entendido", style: .default) { (ok) in
                 alert.dismiss(animated: true, completion: nil)
@@ -45,7 +46,8 @@ class WaterMarkViewController: UIViewController{
 //MARK: Funcion para agregar texto como marca de agua
     
     func textToImage(drawText text: String, inImage image: UIImage, atPoint point: CGPoint) -> UIImage {
-        let textColor = UIColor.yellow
+        //Damos color y opacidad al texto
+        let textColor = UIColor.yellow.withAlphaComponent(0.4)
         let textFont = UIFont(name: "Helvetica Bold", size: 100)!
 
         let scale = UIScreen.main.scale
