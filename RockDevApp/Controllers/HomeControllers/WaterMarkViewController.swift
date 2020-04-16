@@ -19,6 +19,8 @@ class WaterMarkViewController: UIViewController{
         // Do any additional setup after loading the view.
     }
     
+//MARK: Funciones Action de Botones 
+    
     @IBAction func beginBtnPressed(_ sender: Any) {
         //Esta variable es para saber donde vamos a colocar el texto en la imagen
         let textPointOnImage = CGPoint(x: 30, y: 800)
@@ -47,13 +49,10 @@ class WaterMarkViewController: UIViewController{
     @IBAction func shareBtnTapped(_ sender: Any) {
         //Vamos a crear una variable para poder compartir la imagen en redes sociales
         let shareActivity = UIActivityViewController(activityItems: [waterMarkedImageView.image!], applicationActivities: nil)
-        //Presentamos como popover
         shareActivity.popoverPresentationController?.sourceView = self.view
         
+        //Presentamos el Activity Controller
         self.present(shareActivity, animated: true, completion: nil)
-        
-        
-        
     }
     
     
