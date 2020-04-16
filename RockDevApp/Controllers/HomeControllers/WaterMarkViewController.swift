@@ -43,6 +43,20 @@ class WaterMarkViewController: UIViewController{
         
     }
     
+    
+    @IBAction func shareBtnTapped(_ sender: Any) {
+        //Vamos a crear una variable para poder compartir la imagen en redes sociales
+        let shareActivity = UIActivityViewController(activityItems: [waterMarkedImageView.image!], applicationActivities: nil)
+        //Presentamos como popover
+        shareActivity.popoverPresentationController?.sourceView = self.view
+        
+        self.present(shareActivity, animated: true, completion: nil)
+        
+        
+        
+    }
+    
+    
 //MARK: Funcion para agregar texto como marca de agua
     
     func textToImage(drawText text: String, inImage image: UIImage, atPoint point: CGPoint) -> UIImage {
