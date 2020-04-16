@@ -19,7 +19,7 @@ class WaterMarkViewController: UIViewController{
         // Do any additional setup after loading the view.
     }
     
-//MARK: Funciones Action de Botones 
+//MARK: Funciones Action de Botones
     
     @IBAction func beginBtnPressed(_ sender: Any) {
         //Esta variable es para saber donde vamos a colocar el texto en la imagen
@@ -34,25 +34,35 @@ class WaterMarkViewController: UIViewController{
             waterMarkedImageView.image = textToImage(drawText: text!, inImage: contentImageView.image!, atPoint: textPointOnImage)
         }else{
         //Si no hay texto desplegamos una alerta al usuario
-            let alert = UIAlertController(title: "Introduce un texto", message: "", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Ups", message: "Es necesario introducir un texto para poder generar la imagen.", preferredStyle: .alert)
             let ok = UIAlertAction(title: "Entendido", style: .default) { (ok) in
                 alert.dismiss(animated: true, completion: nil)
             }
             alert.addAction(ok)
             self.present(alert, animated: true, completion: nil)
         }
-
-        
     }
     
     
     @IBAction func shareBtnTapped(_ sender: Any) {
-        //Vamos a crear una variable para poder compartir la imagen en redes sociales
-        let shareActivity = UIActivityViewController(activityItems: [waterMarkedImageView.image!], applicationActivities: nil)
-        shareActivity.popoverPresentationController?.sourceView = self.view
         
-        //Presentamos el Activity Controller
-        self.present(shareActivity, animated: true, completion: nil)
+        if let imgToShare = waterMarkedImageView.image{
+            //Vamos a crear una variable para poder compartir la imagen en redes sociales
+            let shareActivity = UIActivityViewController(activityItems: [imgToShare], applicationActivities: nil)
+            shareActivity.popoverPresentationController?.sourceView = self.view
+            
+            //Presentamos el Activity Controller
+            self.present(shareActivity, animated: true, completion: nil)
+        }else{
+            //Si no hay texto desplegamos una alerta al usuario
+            let alert = UIAlertController(title: "Ups", message: "Para compartir una imagen es necesario generarla primero.", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "Entendido", style: .default) { (ok) in
+                alert.dismiss(animated: true, completion: nil)
+            }
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
     }
     
     
