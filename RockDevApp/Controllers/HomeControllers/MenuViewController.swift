@@ -12,6 +12,7 @@ enum MenuType: Int{
     case home
     case route
     case profile
+    case waterMark
     case logout
 
 }
@@ -41,6 +42,10 @@ class MenuViewController: UITableViewController {
         if indexPath.row == 2 {
             
             performSegue(withIdentifier: "imageSegue", sender: Any?.self)
+            
+        } else if indexPath.row == 3{
+            
+            performSegue(withIdentifier: "waterM", sender: Any?.self)
             
         }else{
             guard let menuType = MenuType(rawValue: indexPath.row) else {return}
