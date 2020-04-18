@@ -484,8 +484,25 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="103" id="Esb-vt-8Va">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="103" id="NjK-YU-WEZ">
                                         <rect key="frame" x="0.0" y="430" width="414" height="103"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NjK-YU-WEZ" id="evU-Sy-guo">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gV-p8-Nes">
+                                                    <rect key="frame" x="20" y="23" width="148" height="56"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
+                                                    <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="Graficas"/>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="103" id="Esb-vt-8Va">
+                                        <rect key="frame" x="0.0" y="533" width="414" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Esb-vt-8Va" id="ZHu-9s-Psv">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
@@ -515,6 +532,7 @@
                         <outlet property="usrFetchImageView" destination="nzu-33-HkT" id="FXb-4J-lMx"/>
                         <segue destination="noP-3B-nsy" kind="show" identifier="imageSegue" id="748-Iv-uEx"/>
                         <segue destination="QFW-Fm-GBg" kind="show" identifier="waterM" id="kUd-NP-waC"/>
+                        <segue destination="0VU-Z6-7jq" kind="show" identifier="chart" id="gxL-QJ-Ghy"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9o-jn-7LF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -756,6 +774,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jwn-39-Ieh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1754" y="-445"/>
+        </scene>
+        <!--Charts View Controller-->
+        <scene sceneID="3YV-fN-1Kw">
+            <objects>
+                <viewController id="0VU-Z6-7jq" customClass="ChartsViewController" customModule="RockDevApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hN6-fw-h4e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y3F-Rc-HKW">
+                                <rect key="frame" x="0.0" y="0.0" width="149" height="67"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Graph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UM5-8T-UjN">
+                                        <rect key="frame" x="19" y="10" width="111" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="35"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.1960784314" blue="0.19215686269999999" alpha="0.87243150680000003" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="149" id="mWN-Yn-1kF"/>
+                                    <constraint firstAttribute="height" constant="67" id="y2V-rq-kzn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="y3F-Rc-HKW" firstAttribute="top" secondItem="P88-bv-dYE" secondAttribute="top" id="NrO-sn-pze"/>
+                            <constraint firstItem="y3F-Rc-HKW" firstAttribute="leading" secondItem="P88-bv-dYE" secondAttribute="leading" id="reF-VF-aal"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P88-bv-dYE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EK8-ld-UbP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qal-RX-I8A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="-716"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kt0-qY-dw5">

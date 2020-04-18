@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A45CBF41C9081B7B5AC384EF /* Pods_RockDevApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E7AA733775CB1EE45B7FA2 /* Pods_RockDevApp.framework */; };
 		DB225036243C089A00806310 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB225034243C089A00806310 /* DataModel.xcdatamodeld */; };
 		DB225038243C08FC00806310 /* DataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB225037243C08FC00806310 /* DataBaseHelper.swift */; };
 		DB22503A243C1D8400806310 /* logUserImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB225039243C1D8400806310 /* logUserImageViewController.swift */; };
@@ -38,6 +39,7 @@
 		DBBA134224391A5000835897 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBA134124391A5000835897 /* MenuViewController.swift */; };
 		DBBF9DD924395D4A00CA14B5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF9DD824395D4A00CA14B5 /* MapViewController.swift */; };
 		DBBF9DDD24399B4700CA14B5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBF9DDB24399B4100CA14B5 /* MapKit.framework */; };
+		DBE3014F244AB94900EA889A /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE3014E244AB94900EA889A /* ChartsViewController.swift */; };
 		DBF314232446C55000EECDF8 /* WaterMarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF314222446C55000EECDF8 /* WaterMarkViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27E7AA733775CB1EE45B7FA2 /* Pods_RockDevApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RockDevApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6018A6FF0019EB09D7846C7 /* Pods-RockDevApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RockDevApp.release.xcconfig"; path = "Target Support Files/Pods-RockDevApp/Pods-RockDevApp.release.xcconfig"; sourceTree = "<group>"; };
+		BA4B41204E8D75CDF18BE2E1 /* Pods-RockDevApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RockDevApp.debug.xcconfig"; path = "Target Support Files/Pods-RockDevApp/Pods-RockDevApp.debug.xcconfig"; sourceTree = "<group>"; };
 		DB225035243C089A00806310 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		DB225037243C08FC00806310 /* DataBaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseHelper.swift; sourceTree = "<group>"; };
 		DB225039243C1D8400806310 /* logUserImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logUserImageViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +100,7 @@
 		DBBA134124391A5000835897 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DBBF9DD824395D4A00CA14B5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		DBBF9DDB24399B4100CA14B5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DBE3014E244AB94900EA889A /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		DBF314222446C55000EECDF8 /* WaterMarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterMarkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +111,7 @@
 			files = (
 				DBBF9DDD24399B4700CA14B5 /* MapKit.framework in Frameworks */,
 				DB6EE14B2437B6CF00E260D4 /* Alamofire in Frameworks */,
+				A45CBF41C9081B7B5AC384EF /* Pods_RockDevApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +132,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C913BFD3451318A0B37A3DF4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA4B41204E8D75CDF18BE2E1 /* Pods-RockDevApp.debug.xcconfig */,
+				B6018A6FF0019EB09D7846C7 /* Pods-RockDevApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DB2636442437D14E00656476 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +182,7 @@
 				DB6EE13A2437B51600E260D4 /* RockDevAppUITests */,
 				DB6EE1172437B51000E260D4 /* Products */,
 				DBBF9DDA24399B4100CA14B5 /* Frameworks */,
+				C913BFD3451318A0B37A3DF4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -225,6 +242,7 @@
 				DBBF9DD824395D4A00CA14B5 /* MapViewController.swift */,
 				DB225039243C1D8400806310 /* logUserImageViewController.swift */,
 				DBF314222446C55000EECDF8 /* WaterMarkViewController.swift */,
+				DBE3014E244AB94900EA889A /* ChartsViewController.swift */,
 			);
 			path = HomeControllers;
 			sourceTree = "<group>";
@@ -244,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				DBBF9DDB24399B4100CA14B5 /* MapKit.framework */,
+				27E7AA733775CB1EE45B7FA2 /* Pods_RockDevApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -255,9 +274,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB6EE1402437B51600E260D4 /* Build configuration list for PBXNativeTarget "RockDevApp" */;
 			buildPhases = (
+				7F9A191CE00435D2D3672F79 /* [CP] Check Pods Manifest.lock */,
 				DB6EE1122437B51000E260D4 /* Sources */,
 				DB6EE1132437B51000E260D4 /* Frameworks */,
 				DB6EE1142437B51000E260D4 /* Resources */,
+				87C24E791D2DA7DBA360B4E9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -381,12 +402,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7F9A191CE00435D2D3672F79 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RockDevApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87C24E791D2DA7DBA360B4E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RockDevApp/Pods-RockDevApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RockDevApp/Pods-RockDevApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RockDevApp/Pods-RockDevApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DB6EE1122437B51000E260D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DBBA132C24390DC700835897 /* ValidateFuncions.swift in Sources */,
+				DBE3014F244AB94900EA889A /* ChartsViewController.swift in Sources */,
 				DB26364B2437D24000656476 /* LoginViewController.swift in Sources */,
 				DB6EE11E2437B51000E260D4 /* ViewController.swift in Sources */,
 				DB225036243C089A00806310 /* DataModel.xcdatamodeld in Sources */,
@@ -580,6 +644,7 @@
 		};
 		DB6EE1412437B51600E260D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA4B41204E8D75CDF18BE2E1 /* Pods-RockDevApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -598,6 +663,7 @@
 		};
 		DB6EE1422437B51600E260D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6018A6FF0019EB09D7846C7 /* Pods-RockDevApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

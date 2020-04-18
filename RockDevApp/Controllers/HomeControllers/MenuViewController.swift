@@ -13,6 +13,7 @@ enum MenuType: Int{
     case route
     case profile
     case waterMark
+    case graphics
     case logout
 
 }
@@ -47,7 +48,11 @@ class MenuViewController: UITableViewController {
             
             performSegue(withIdentifier: "waterM", sender: Any?.self)
             
-        }else{
+        } else if indexPath.row == 4{
+            
+            performSegue(withIdentifier: "chart", sender: Any?.self)
+            
+        } else{
             guard let menuType = MenuType(rawValue: indexPath.row) else {return}
             //Dependiendo la row que toquemos el enum nos lleva a una accion en otro controller o a cerrar session.
             dismiss(animated: true) { [weak self] in
